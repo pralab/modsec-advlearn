@@ -1,0 +1,20 @@
+crs_dir                   = "./coreruleset/rules/"
+crs_ids_path              = "./data/crs_sqli_ids_4.0.0.json"
+crs_weights_path          = "./data/crs_sqli_weights_4.0.0.json"
+models_path               = "./data/models/"
+models_wafamole_path      = "./data/models_wafamole/"
+figures_path              = './data/figures/'
+dataset_path              = './data/dataset/'
+dataset_wafamole_path     = './data/dataset_wafamole/'
+adv_dataset_path          = './wafamole_results/results_dataset/adv_payloads_test/'
+adv_dataset_wafamole_path = './wafamole_results/results_dataset/adv_payloads_test_wafamole/'
+malicious_path            = '../http-traffic-dataset/malicious/sqli_dataset.json'
+legitimate_path           = '../http-traffic-dataset/legitimate/legitimate_dataset.json'
+
+[params]
+paranoia_levels = [1, 2, 3, 4]
+# Models that accept the 'penalty' parameter 
+models          = ['svc', 'log_reg']
+# Models that doesn't accept the 'penalty' parameter
+other_models    = ['modsec', 'rf', 'infsvm']
+penalties       = ['l1', 'l2']
