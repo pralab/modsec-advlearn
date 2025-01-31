@@ -41,7 +41,10 @@ git clone --branch v4.0.0 git@github.com:coreruleset/coreruleset.git
 All experiments can be executed using the Python scripts within the `scripts` folder. The scripts must be executed starting from the project's root.
 ```bash
 python3 scripts/<script_name>.py
-
 ```
+
+## Acknowledgements
+
+ModSec-AdvLearn has been partly supported by the [TESTABLE project](https://testable.eu/), funded by the EU H2020 research and innovation program (grant no. 101019206); the [ELSA project](https://elsa-ai.eu/), funded by the Horizon Europe research and innovation program (grant no. 101070617); projects [FAIR (PE00000013)](https://fondazione-fair.it/) and [SERICS (PE00000014)](https://serics.eu/) under the NRRP MUR program funded by the EU – NGEU.
 
 
