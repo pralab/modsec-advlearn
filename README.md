@@ -47,4 +47,8 @@ python3 scripts/<script_name>.py
 
 ModSec-AdvLearn has been partly supported by the [TESTABLE project](https://testable.eu/), funded by the EU H2020 research and innovation program (grant no. 101019206); the [ELSA project](https://elsa-ai.eu/), funded by the Horizon Europe research and innovation program (grant no. 101070617); projects [FAIR (PE00000013)](https://fondazione-fair.it/) and [SERICS (PE00000014)](https://serics.eu/) under the NRRP MUR program funded by the EU – NGEU.
 
-
+<img src="assets/logos/testable.png" alt="testable" style="width:70px;"/> &nbsp;&nbsp; 
+<img src="assets/logos/elsa.png" alt="elsa" style="width:70px;"/> &nbsp;&nbsp;
+<img src="assets/logos/fair.svg" alt="fair" style="width:240px;"/> &nbsp;&nbsp;
+<img src="assets/logos/serics.svg" alt="elsa" style="width:240px;"/> &nbsp;&nbsp;
+<img src="assets/logos/FundedbytheEU.png" alt="europe" style="width:240px;"/>
