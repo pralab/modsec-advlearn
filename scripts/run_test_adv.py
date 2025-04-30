@@ -26,7 +26,7 @@ if __name__ == '__main__':
     models           = settings['params']['models']
     other_models     = settings['params']['other_models']
     penalties        = settings['params']['penalties']
-    
+
     fig, axs = plt.subplots(2, 4, figsize=(22, 8))
     datasets = ['wafamole', 'modsec-learn']
 
@@ -72,7 +72,7 @@ if __name__ == '__main__':
         malicious_path = os.path.join(
             dataset_path,
             f'malicious_test.{ext}'
-        ),
+        )
 
         print(f'[INFO] Loading dataset for {dataset}...')
 
@@ -159,8 +159,8 @@ if __name__ == '__main__':
 
                 if model_name == 'modsec':
                     label_legend     = 'ModSec'
-                    normal_settings  = {'color': 'red'}
-                    adv_settings     = {'color': 'red', 'linestyle': 'dashed'}
+                    normal_settings  = {'color': 'red', 'linewidth': 2}
+                    adv_settings     = {'color': 'red', 'linestyle': 'dashed', 'linewidth': 2}
                     waf              = PyModSecurity(
                         rules_dir = crs_dir,
                         pl        = pl
@@ -220,7 +220,7 @@ if __name__ == '__main__':
                         include_zoom       = False ,
                         pl                 = pl
                     )
-                    
+
                     # Ploting the ROC curve (adversarial)
                     plot_roc(
                         dataset_idx,
@@ -259,7 +259,7 @@ if __name__ == '__main__':
                         include_zoom       = False ,
                         pl                 = pl
                     )
-                    
+
                     # Ploting the ROC curve (adversarial)
                     plot_roc(
                         dataset_idx,
@@ -307,7 +307,7 @@ if __name__ == '__main__':
                             include_zoom       = False ,
                             pl                 = pl
                         )
-                        
+
                         # Ploting the ROC curve (adversarial)
                         plot_roc(
                             dataset_idx,
@@ -330,7 +330,7 @@ if __name__ == '__main__':
                             os.path.join(models_path, f'log_reg_pl{pl}_{penalty}.joblib')
                         )
                         y_scores = model.predict_proba(xts)[:, 1]
-                        
+
                         if penalty == 'l1':
                            adv_y_scores  = model.predict_proba(adv_log_reg_l1_xts)[:, 1]
                            adv_yts       = adv_log_reg_l1_yts
@@ -352,7 +352,7 @@ if __name__ == '__main__':
                             include_zoom       = False ,
                             pl                 = pl
                         )
-                        
+
                         # Ploting the ROC curve (adversarial)
                         plot_roc(
                             dataset_idx,
@@ -372,7 +372,7 @@ if __name__ == '__main__':
         for pl_idx, ax in enumerate(ax_row):
             if idx == 0:
                 ax.set_title(f'PL {pl_idx + 1}', fontsize=16)
-            
+
             ax.xaxis.set_tick_params(labelsize=14)
             ax.yaxis.set_tick_params(labelsize=14)
             ax.xaxis.label.set_size(16)

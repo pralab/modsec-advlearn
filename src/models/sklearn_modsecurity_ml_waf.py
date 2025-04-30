@@ -1,11 +1,12 @@
 """
-A wrapper for the ModSecurity CRS WAF, used by WAF-A-MoLE during the 
+A wrapper for the ModSecurity CRS WAF, used by WAF-A-MoLE during the
 generation of adversarial examples.
 """
 
 import os
 import sys
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
 from wafamole.models import SklearnModelWrapper
 from wafamole.utils.check import type_check
@@ -13,28 +14,20 @@ from wafamole.utils.check import type_check
 
 class SklearnModSecurityMlWaf(SklearnModelWrapper):
     def __init__(
-        self, 
-        sklearn_clf_path, 
-        crs_rules_ids_path, 
-        rules_path, 
-        crs_threshold, 
-        crs_pl
+        self, sklearn_clf_path, crs_rules_ids_path, rules_path, crs_threshold, crs_pl
     ):
         super(SklearnModSecurityMlWaf, self).__init__()
         super(SklearnModSecurityMlWaf, self).load(sklearn_clf_path)
-        
+
         type_check(crs_rules_ids_path, str, "crs_rules_ids_path")
         type_check(rules_path, str, "rules_path")
-        
+
         from src.extractor import ModSecurityFeaturesExtractor
 
         self._feat_builder = ModSecurityFeaturesExtractor(
-            crs_rules_ids_path, 
-            rules_path,
-            crs_threshold, 
-            crs_pl
+            crs_rules_ids_path, rules_path, crs_threshold, crs_pl
         )
-        
+
     def features_extraction(self, value: str):
         type_check(value, str, "value")
         feature_vector = self._feat_builder.extract_features_wafamole(value)

@@ -529,7 +529,6 @@ if __name__ == "__main__":
             ax.yaxis.set_tick_params(labelsize=14)
             ax.xaxis.label.set_size(16)
             ax.yaxis.label.set_size(16)
-            ax.set_ylim([0.8, 1.0])
 
     handles, labels = axs[0, 0].get_legend_handles_labels()
     fig.legend(

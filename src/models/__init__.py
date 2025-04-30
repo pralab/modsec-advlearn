@@ -2,3 +2,10 @@ from .modsec import PyModSecurity
 from .svminf import InfSVM2
 from .sklearn_modsecurity_ml_waf import SklearnModSecurityMlWaf
 from .modsec_wafamole import PyModSecurityWafamole
+
+__all__ = [
+    "PyModSecurity",
+    "InfSVM2",
+    "SklearnModSecurityMlWaf",
+    "PyModSecurityWafamole"
+]
