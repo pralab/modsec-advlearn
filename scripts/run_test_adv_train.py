@@ -555,8 +555,8 @@ if __name__ == "__main__":
 
     for ax_row in axs:
         for ax in ax_row:
-            ax.xaxis.set_tick_params(labelsize=14)
-            ax.yaxis.set_tick_params(labelsize=14)
+            ax.xaxis.set_tick_params(labelsize=16)
+            ax.yaxis.set_tick_params(labelsize=16)
             ax.xaxis.label.set_size(16)
             ax.yaxis.label.set_size(16)
 

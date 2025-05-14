@@ -30,7 +30,7 @@ if __name__ == "__main__":
     penalties = settings["params"]["penalties"]
 
     fig, axs = plt.subplots(4, 4, figsize=(22, 14))
-    fig.subplots_adjust(hspace=0.12, wspace=0.08)
+    fig.subplots_adjust(hspace=0.12, wspace=0.12)
     datasets = [("wafamole", 0), ("modsec-learn", 2)]
 
     for dataset, dataset_idx in datasets:
@@ -409,8 +409,8 @@ if __name__ == "__main__":
             if idx == 0:
                 ax.set_title(f"PL {pl_idx + 1}", fontsize=16)
 
-            ax.xaxis.set_tick_params(labelsize=14)
-            ax.yaxis.set_tick_params(labelsize=14)
+            ax.xaxis.set_tick_params(labelsize=16)
+            ax.yaxis.set_tick_params(labelsize=16)
             ax.xaxis.label.set_size(16)
             ax.yaxis.label.set_size(16)
 
