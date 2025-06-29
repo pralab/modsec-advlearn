@@ -4,6 +4,16 @@
 
 If you want to cite us, please use the following (BibTeX) reference:
 ```bibtex
+@ARTICLE{11050937,
+  author={Floris, Giuseppe and Scano, Christian and Montaruli, Biagio and Demetrio, Luca and Valenza, Andrea and Compagna, Luca and Ariu, Davide and Piras, Luca and Balzarotti, Davide and Biggio, Battista},
+  journal={IEEE Transactions on Information Forensics and Security}, 
+  title={ModSec-AdvLearn: Countering Adversarial SQL Injections with Robust Machine Learning}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-1},
+  keywords={Training;Payloads;Robustness;Machine learning;Electronic mail;SQL injection;Codes;Passwords;Monitoring;Firewalls (computing);web application firewalls;machine learning;sql injection;adversarial training},
+  doi={10.1109/TIFS.2025.3583234}}
 ```
 
 ## Getting started
